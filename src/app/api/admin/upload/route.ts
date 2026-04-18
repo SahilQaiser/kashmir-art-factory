@@ -23,7 +23,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "R2 bucket not configured." }, { status: 500 });
   }
 
-  await env.MEDIA.put(key, file.stream(), {
+  const buffer = await file.arrayBuffer();
+  await env.MEDIA.put(key, buffer, {
     httpMetadata: { contentType: file.type || "image/jpeg" },
   });
 

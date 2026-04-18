@@ -15,9 +15,13 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ key
     return new NextResponse("Not found", { status: 404 });
   }
 
-  const headers = new Headers();
-  object.writeHttpMetadata(headers);
-  headers.set("cache-control", "public, max-age=31536000, immutable");
+  const buffer = await object.arrayBuffer();
 
-  return new NextResponse(object.body, { headers });
+  const contentType = object.httpMetadata?.contentType ?? "application/octet-stream";
+  return new NextResponse(buffer, {
+    headers: {
+      "content-type": contentType,
+      "cache-control": "public, max-age=31536000, immutable",
+    },
+  });
 }
