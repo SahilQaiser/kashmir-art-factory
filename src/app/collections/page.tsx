@@ -8,7 +8,6 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 import VideoShowcase from "@/components/VideoShowcase";
 import type { Product } from "@/lib/types";
 
-export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
