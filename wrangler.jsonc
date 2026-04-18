@@ -12,6 +12,14 @@
 		"binding": "ASSETS",
 		"directory": ".open-next/assets"
 	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "kashmir-art-factory-db",
+			"database_id": "YOUR_DATABASE_ID",
+			"migrations_dir": "migrations"
+		}
+	],
 	"observability": {
 		"enabled": true
 	},

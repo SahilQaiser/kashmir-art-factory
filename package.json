@@ -2,7 +2,7 @@
 	"name": "kashmir-art-factory",
 	"description": "Build a full-stack web application with Next.js.",
 	"cloudflare": {
-		"label": "Next.js Framework Starter",
+		"label": "Kashmir Art Factory",
 		"products": [
 			"Workers"
 		],
@@ -13,6 +13,7 @@
 	},
 	"dependencies": {
 		"@opennextjs/cloudflare": "1.14.0",
+		"lucide-react": "^0.475.0",
 		"next": "16.0.7",
 		"react": "19.2.1",
 		"react-dom": "19.2.1"
@@ -23,6 +24,7 @@
 		"@types/node": "24.10.1",
 		"@types/react": "19.2.7",
 		"@types/react-dom": "19.2.3",
+		"baseline-browser-mapping": "^2.10.19",
 		"eslint": "9.39.2",
 		"eslint-config-next": "16.0.7",
 		"tailwindcss": "4.1.17",
