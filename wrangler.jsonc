@@ -7,7 +7,10 @@
 	"name": "kashmir-art-factory",
 	"main": ".open-next/worker.js",
 	"compatibility_date": "2025-10-08",
-	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+	"compatibility_flags": [
+		"nodejs_compat",
+		"global_fetch_strictly_public"
+	],
 	"assets": {
 		"binding": "ASSETS",
 		"directory": ".open-next/assets"
@@ -16,7 +19,7 @@
 		{
 			"binding": "DB",
 			"database_name": "kashmir-art-factory-db",
-			"database_id": "YOUR_DATABASE_ID",
+			"database_id": "1bb01ab3-67dd-4f91-8063-6c7a4105c560",
 			"migrations_dir": "migrations"
 		}
 	],
