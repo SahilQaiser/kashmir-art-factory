@@ -23,6 +23,12 @@
 			"migrations_dir": "migrations"
 		}
 	],
+	"r2_buckets": [
+		{
+			"binding": "MEDIA",
+			"bucket_name": "kashmir-art-factory-images"
+		}
+	],
 	"observability": {
 		"enabled": true
 	},
