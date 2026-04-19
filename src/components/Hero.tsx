@@ -26,7 +26,7 @@ export default function Hero() {
           <div className="flex items-center gap-3 mb-6">
             <div className="w-8 h-px bg-kashmir-saffron" />
             <span className="text-kashmir-saffron-light text-xs font-medium tracking-[0.3em] uppercase font-sans">
-              Handmade in Srinagar, Kashmir
+              Handmade in Ganderbal, Kashmir
             </span>
           </div>
 
@@ -40,7 +40,7 @@ export default function Hero() {
 
           {/* Subheadline */}
           <p className="text-white/75 text-lg md:text-xl leading-relaxed mb-10 max-w-lg font-sans font-light">
-            We&apos;re a small workshop in Srinagar — we create personalized
+            We&apos;re a small workshop in Ganderbal — we create personalized
             wooden wall art, calligraphy, and decorative pieces using modern
             precision and a whole lot of care.
           </p>
