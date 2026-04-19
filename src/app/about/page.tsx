@@ -8,12 +8,12 @@ import { Heart, Zap, MapPin, ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "We're a hands-on workshop in Srinagar, Kashmir — making hand-crafted wooden wall art, calligraphy, and custom pieces for homes around the world.",
+    "We're a hands-on workshop in Ganderbal, Kashmir — making hand-crafted wooden wall art, calligraphy, and custom pieces for homes around the world.",
   alternates: { canonical: "https://kashmirartfactory.in/about" },
   openGraph: {
     title: "About Kashmir Art Factory",
     description:
-      "A small workshop with a lot of heart — handcrafting wooden art from Srinagar, Kashmir since day one.",
+      "A small workshop with a lot of heart — handcrafting wooden art from Ganderbal, Kashmir since day one.",
     url: "https://kashmirartfactory.in/about",
     images: [{ url: "/assets/bismillah2.jpg", width: 1200, height: 630, alt: "Kashmir Art Factory workshop" }],
   },
@@ -95,7 +95,7 @@ export default function AboutPage() {
                   people could actually customize and call their own.
                 </p>
                 <p>
-                  So we set up a workshop in Srinagar, got our hands on some
+                  So we set up a workshop in Ganderbal, got our hands on some
                   good machines, and started making things. Bit by bit, order by
                   order, we&apos;ve grown — and the best part of the job is still
                   seeing a finished piece and knowing someone somewhere is going

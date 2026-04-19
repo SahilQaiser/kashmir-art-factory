@@ -69,12 +69,14 @@ export default function Footer() {
             <div className="flex gap-3">
               {[
                 { icon: Instagram, href: "https://instagram.com/kashmirartfactory", label: "Instagram" },
-                { icon: Facebook, href: "#", label: "Facebook" },
-                { icon: Youtube, href: "#", label: "YouTube" },
+                { icon: Facebook, href: "https://www.facebook.com/immyshah888/", label: "Facebook" },
+                { icon: Youtube, href: "https://www.youtube.com/@kashmirartfactory", label: "YouTube" },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="w-8 h-8 border border-kashmir-walnut-mid rounded-sm flex items-center justify-center text-kashmir-cream/50 hover:text-kashmir-saffron-light hover:border-kashmir-saffron/40 transition-colors"
                 >
