@@ -17,7 +17,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const { env } = await getCloudflareContext();
+  const { env } = await getCloudflareContext({ async: true });
   const collection = await env.DB
     .prepare("SELECT * FROM collections WHERE slug = ?")
     .bind(slug)
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CollectionPage({ params }: Props) {
   const { slug } = await params;
-  const { env } = await getCloudflareContext();
+  const { env } = await getCloudflareContext({ async: true });
 
   // Fetch the specific collection metadata
   const collection = await env.DB

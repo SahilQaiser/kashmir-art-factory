@@ -11,7 +11,7 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     video_url?: string; title?: string; source?: string; description?: string; sort_order?: number;
   };
 
-  const { env } = await getCloudflareContext();
+  const { env } = await getCloudflareContext({ async: true });
   await env.DB.prepare(
     `UPDATE media_mentions SET
       video_url = COALESCE(?, video_url),
@@ -35,7 +35,7 @@ export async function DELETE(_req: NextRequest, { params }: { params: Promise<{ 
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { id } = await params;
-  const { env } = await getCloudflareContext();
+  const { env } = await getCloudflareContext({ async: true });
   await env.DB.prepare("DELETE FROM media_mentions WHERE id = ?").bind(id).run();
   return NextResponse.json({ success: true });
 }

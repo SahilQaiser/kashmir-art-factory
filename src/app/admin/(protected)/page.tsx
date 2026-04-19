@@ -3,7 +3,7 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 export const dynamic = "force-dynamic";
 
 export default async function AdminDashboard() {
-  const { env } = await getCloudflareContext();
+  const { env } = await getCloudflareContext({ async: true });
 
   const [messages, orders, products, collections] = await Promise.all([
     env.DB.prepare("SELECT COUNT(*) as count FROM contact_messages").first<{ count: number }>(),

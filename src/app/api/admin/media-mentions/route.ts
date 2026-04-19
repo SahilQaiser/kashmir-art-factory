@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Missing required fields." }, { status: 400 });
   }
 
-  const { env } = await getCloudflareContext();
+  const { env } = await getCloudflareContext({ async: true });
   await env.DB.prepare(
     "INSERT INTO media_mentions (video_url, title, source, description, sort_order) VALUES (?, ?, ?, ?, ?)"
   )

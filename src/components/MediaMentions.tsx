@@ -11,7 +11,7 @@ function getEmbedUrl(url: string) {
 }
 
 export default async function MediaMentions() {
-  const { env } = await getCloudflareContext();
+  const { env } = await getCloudflareContext({ async: true });
   const { results: mentions } = await env.DB
     .prepare("SELECT * FROM media_mentions ORDER BY sort_order ASC")
     .all<MediaMention>();

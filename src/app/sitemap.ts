@@ -4,7 +4,7 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 const BASE = "https://kashmirartfactory.in";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const { env } = await getCloudflareContext();
+  const { env } = await getCloudflareContext({ async: true });
   const { results: collections } = await env.DB
     .prepare("SELECT slug FROM collections")
     .all<{ slug: string }>();
