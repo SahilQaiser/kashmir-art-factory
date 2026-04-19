@@ -1,8 +1,29 @@
 import type { MetadataRoute } from "next";
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 
 const BASE = "https://kashmirartfactory.in";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export const dynamic = "force-dynamic";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  let collectionUrls: MetadataRoute.Sitemap = [];
+  
+  try {
+    const { env } = await getCloudflareContext({ async: true });
+    const { results: collections } = await env.DB
+      .prepare("SELECT slug FROM collections")
+      .all<{ slug: string }>();
+
+    collectionUrls = collections.map((c) => ({
+      url: `${BASE}/collections/${c.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    }));
+  } catch (e) {
+    console.error("Sitemap generation error:", e);
+  }
+
   return [
     {
       url: BASE,
@@ -16,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    ...collectionUrls,
     {
       url: `${BASE}/custom-orders`,
       lastModified: new Date(),

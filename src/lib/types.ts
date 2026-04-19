@@ -36,3 +36,12 @@ export interface Testimonial {
   stars: number;
   sort_order: number;
 }
+
+export interface MediaMention {
+  id: number;
+  video_url: string;
+  title: string;
+  source: string;
+  description: string;
+  sort_order: number;
+}

@@ -5,7 +5,7 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 import type { Collection } from "@/lib/types";
 
 export default async function Collections() {
-  const { env } = await getCloudflareContext();
+  const { env } = await getCloudflareContext({ async: true });
   const { results } = await env.DB
     .prepare("SELECT * FROM collections ORDER BY sort_order")
     .all<Collection>();

@@ -3,7 +3,7 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 import type { Testimonial } from "@/lib/types";
 
 export default async function Testimonials() {
-  const { env } = await getCloudflareContext();
+  const { env } = await getCloudflareContext({ async: true });
   const { results } = await env.DB
     .prepare("SELECT * FROM testimonials ORDER BY sort_order")
     .all<Testimonial>();
