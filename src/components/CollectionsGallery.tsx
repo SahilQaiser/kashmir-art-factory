@@ -6,12 +6,12 @@ import { useState } from "react";
 import { MessageCircle } from "lucide-react";
 import type { Product } from "@/lib/types";
 
-export default function CollectionsGallery({ products }: { products: Product[] }) {
+export default function CollectionsGallery({ products, initialCategory = "All" }: { products: Product[], initialCategory?: string }) {
   const categories = [
     "All",
     ...Array.from(new Set(products.map((p) => p.category))),
   ];
-  const [active, setActive] = useState("All");
+  const [active, setActive] = useState(initialCategory);
 
   const filtered =
     active === "All" ? products : products.filter((p) => p.category === active);
@@ -26,11 +26,10 @@ export default function CollectionsGallery({ products }: { products: Product[] }
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
-                className={`flex-shrink-0 text-xs font-medium tracking-wide uppercase px-4 py-2 transition-all font-sans ${
-                  active === cat
+                className={`flex-shrink-0 text-xs font-medium tracking-wide uppercase px-4 py-2 transition-all font-sans ${active === cat
                     ? "bg-kashmir-walnut text-kashmir-cream"
                     : "text-kashmir-muted hover:text-kashmir-walnut hover:bg-kashmir-cream-dark"
-                }`}
+                  }`}
               >
                 {cat}
               </button>
