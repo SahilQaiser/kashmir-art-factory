@@ -57,7 +57,7 @@ export default async function CollectionsPage() {
                   Our Collections
                 </h1>
                 <p className="text-kashmir-cream/60 text-lg font-sans mt-4 max-w-lg leading-relaxed">
-                  Handcrafted wooden art from our workshop in Srinagar, Kashmir.
+                  Handcrafted wooden art from our workshop in Ganderbal, Kashmir.
                   Every piece can be customised to order.
                 </p>
               </div>

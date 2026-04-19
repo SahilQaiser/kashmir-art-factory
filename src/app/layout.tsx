@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kashmir Art Factory | Handcrafted Kashmiri Woodwork & Art",
     description:
-      "Handcrafted wooden wall art, Islamic calligraphy, and custom pieces — made by hand in Srinagar, Kashmir.",
+      "Handcrafted wooden wall art, Islamic calligraphy, and custom pieces — made by hand in Ganderbal, Kashmir.",
     url: SITE_URL,
     siteName: "Kashmir Art Factory",
     images: [
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kashmir Art Factory | Handcrafted Kashmiri Woodwork & Art",
     description:
-      "Handcrafted wooden wall art, Islamic calligraphy, and custom pieces — made by hand in Srinagar, Kashmir.",
+      "Handcrafted wooden wall art, Islamic calligraphy, and custom pieces — made by hand in Ganderbal, Kashmir.",
     images: ["/assets/mandala.jpg"],
   },
   robots: {

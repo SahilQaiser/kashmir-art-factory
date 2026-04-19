@@ -35,7 +35,7 @@ export default function HeritageBanner() {
         </blockquote>
 
         <cite className="not-italic text-kashmir-saffron-light text-sm tracking-widest uppercase font-sans block mb-10">
-          — Kashmir Art Factory, Srinagar
+          — Kashmir Art Factory, Ganderbal
         </cite>
 
         <Link

@@ -36,7 +36,7 @@ const values = [
     icon: MapPin,
     title: "Proudly from Kashmir",
     description:
-      "We're based in Srinagar and every piece that leaves our workshop carries a little bit of Kashmir with it — and we're proud of that.",
+      "We're based in Ganderbal and every piece that leaves our workshop carries a little bit of Kashmir with it — and we're proud of that.",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function AboutPage() {
               <em className="not-italic text-kashmir-saffron-light">A Lot of Heart.</em>
             </h1>
             <p className="text-kashmir-cream/70 text-lg leading-relaxed font-sans">
-              We&apos;re Kashmir Art Factory — a hands-on workshop in Srinagar
+              We&apos;re Kashmir Art Factory — a hands-on workshop in Ganderbal
               making wooden wall art, calligraphy, and custom pieces for people
               all over the world.
             </p>
@@ -114,7 +114,7 @@ export default function AboutPage() {
                 />
               </div>
               <div className="absolute -bottom-5 -left-5 bg-kashmir-saffron text-white p-5 w-44">
-                <div className="font-serif text-lg font-bold mb-0.5">Srinagar</div>
+                <div className="font-serif text-lg font-bold mb-0.5">Ganderbal</div>
                 <div className="text-xs text-white/80 font-sans leading-relaxed">
                   Our home & workshop, Kashmir
                 </div>

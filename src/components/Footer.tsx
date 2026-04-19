@@ -40,7 +40,7 @@ export default function Footer() {
             </Link>
             <p className="text-kashmir-cream/60 text-sm leading-relaxed font-sans mb-6 max-w-xs">
               Handcrafted Kashmiri woodwork and decorative art. Each piece is
-              carved by master artisans in Srinagar, Kashmir.
+              carved by master artisans in Ganderbal, Kashmir.
             </p>
 
             {/* Contact */}
