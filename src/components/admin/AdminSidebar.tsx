@@ -2,15 +2,26 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { LayoutDashboard, MessageSquare, ShoppingBag, Package, Grid3X3, LogOut, Menu, X } from "lucide-react";
+import { 
+  LayoutDashboard, 
+  MessageSquare, 
+  Package, 
+  LogOut, 
+  Menu, 
+  X, 
+  Library, 
+  Video, 
+  ShoppingCart 
+} from "lucide-react";
 import { useState, useEffect } from "react";
 
 const nav = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/messages", label: "Messages", icon: MessageSquare },
-  { href: "/admin/orders", label: "Orders", icon: ShoppingBag },
   { href: "/admin/products", label: "Products", icon: Package },
-  { href: "/admin/collections", label: "Collections", icon: Grid3X3 },
+  { href: "/admin/collections", label: "Collections", icon: Library },
+  { href: "/admin/media-mentions", label: "Media Mentions", icon: Video },
+  { href: "/admin/orders", label: "Orders", icon: ShoppingCart },
 ];
 
 export default function AdminSidebar() {

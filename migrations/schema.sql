@@ -115,3 +115,17 @@ INSERT OR IGNORE INTO testimonials (name, role, quote, stars, sort_order) VALUES
   ('Sarah Mitchell',    'Interior Designer, London',  'The carved wall panel I commissioned for a client''s dining room has become the centrepiece of the space. The level of detail and craftsmanship is extraordinary — nothing like it available in the UK.', 5, 1),
   ('Rahul Mehta',       'Architect, Mumbai',           'I''ve sourced bespoke pieces from Kashmir Art Factory for three luxury residential projects now. Every time, the quality exceeds expectations and the team is incredibly professional.',                   5, 2),
   ('Amelia Johansson',  'Homeowner, Stockholm',        'We ordered a custom chinar-motif panel for our living room. The communication throughout the process was wonderful, and the finished piece is absolutely breathtaking.',                                   5, 3);
+
+CREATE TABLE IF NOT EXISTS media_mentions (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  video_url TEXT NOT NULL,
+  title TEXT NOT NULL,
+  source TEXT NOT NULL,
+  description TEXT NOT NULL,
+  sort_order INTEGER NOT NULL DEFAULT 0
+);
+
+-- ─── Seed: media_mentions ───────────────────────────────────────────────────
+
+INSERT OR IGNORE INTO media_mentions (video_url, title, source, description, sort_order) VALUES
+  ('https://www.youtube.com/watch?v=8pIn2078z5Q', 'Art of Woodworking in Kashmir', 'The Kashmir Monitor', 'Exploring the intricate craftsmanship and the story behind Kashmir Art Factory''s rise in the valley.', 1);

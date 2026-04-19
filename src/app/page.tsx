@@ -5,6 +5,7 @@ import Collections from "@/components/Collections";
 import Craftsmanship from "@/components/Craftsmanship";
 import FeaturedPieces from "@/components/FeaturedPieces";
 import HeritageBanner from "@/components/HeritageBanner";
+import MediaMentions from "@/components/MediaMentions";
 import Testimonials from "@/components/Testimonials";
 import CustomOrderCTA from "@/components/CustomOrderCTA";
 import Footer from "@/components/Footer";
@@ -31,6 +32,7 @@ export default function HomePage() {
         <Craftsmanship />
         <FeaturedPieces />
         <HeritageBanner />
+        <MediaMentions />
         <Testimonials />
         <CustomOrderCTA />
       </main>
